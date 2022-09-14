@@ -62,3 +62,8 @@ about :
 /// `swapd` exchanges the position of the two elements below the top element
 /// of the value stack.
 func swapd x y z = y x z
+
+export {
+    clear, gather, spread,
+    dup, dupd, drop, nip, over, pick, rot, swap, swapd
+}

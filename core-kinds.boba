@@ -41,3 +41,9 @@ kind Trust : boolean
 about:
 /// The kind of 'cleared for sharing' attributes on strings and other data types.
 kind Clearance : boolean
+
+
+export {
+    Data, Sharing, Value, Constraint, Effect, Field, Permission,
+    Totality, Fixed, Trust, Clearance
+}
