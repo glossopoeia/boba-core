@@ -1,3 +1,6 @@
+import { * } "core-kinds" as kinds
+import { * } "core-numbers" as nums
+
 native nil-tuple
     : z... ===[ e... ][ p... ][ True ]==> z... [| |]^s
     =
@@ -104,4 +107,4 @@ native length-list
 
 func is-empty-list = length-list 0 eq-inative
 
-export { }
+export { * }
