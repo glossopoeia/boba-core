@@ -100,6 +100,7 @@ instance range : (INative u)
             current-low yield!;
             current-low step add-inative
         }
+        drop
     }
 
 instance range : (Rune t c)
@@ -110,6 +111,7 @@ instance range : (Rune t c)
             current-low yield!;
             current-low step add-i32
         }
+        drop
     }
 
 
