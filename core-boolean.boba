@@ -1,3 +1,5 @@
+import { * } "core-kinds" as kinds
+
 about :
 /// The native Boolean data type which contains just two values, `True` and `False`.
 data Bool
@@ -61,8 +63,4 @@ native neq-bool
     # l, r := fiber.PopTwoValues()
     # fiber.PushValue(l.(bool) != r.(bool))
 
-export {
-    Bool,
-    true-bool, false-bool,
-    not-bool, and-bool, or-bool, eq-bool, neq-bool
-}
+export { * }

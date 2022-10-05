@@ -1,3 +1,8 @@
+import { * } "core-kinds" as kinds
+import { * } "core-boolean" as bools
+import { * } "core-numbers" as numbs
+import { * } "core-strings" as str
+
 // =====================================================
 // TO BOOLEAN
 // =====================================================
@@ -952,4 +957,4 @@ native conv-i32-rune
     =
     # fiber.PushValue(rune(fiber.PopOneValue().(int32)))
 
-export { }
+export { * }

@@ -1,3 +1,5 @@
+import { * } "core-kinds" as kinds
+import { * } "core-boolean" as bools
 import native "math"
 
 kind Measure : abelian
@@ -1447,4 +1449,4 @@ native gte-double
     # l := fiber.PopOneValue().(float64)
     # fiber.PushValue(l >= r)
 
-export { }
+export { * }

@@ -1,3 +1,7 @@
+import { * } "core-kinds" as kinds
+import { * } "core-boolean" as bools
+import { * } "core-numbers" as nums
+
 import native "strings"
 import native "unicode/utf8"
 
@@ -152,4 +156,4 @@ native println-string
     # str := fiber.PopOneValue().(string)
     # println(str)
 
-export { }
+export { * }

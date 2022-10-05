@@ -1,3 +1,9 @@
+import { * } "core-kinds" as kinds
+import { * } "core-combinators" as com
+import { * } "core-boolean" as bool
+import { * } "core-numbers" as num
+import { * } "core-strings" as str
+
 overload eq as Eq? a
     : z... a^s a^r ===[ e... ][ p... ][ True ]==> z... Bool^q
 
@@ -49,9 +55,21 @@ instance eq : (Rune t c)
 instance eq : <= Eq? y => [y^_]
     =
     match {
-        | [] [] => True
-        | [ ls... l ] [ rs... r ] =>
-            if l r eq then { [ ls... ] [ rs... ] eq } else { False }
+    | [] [] => True
+    | [ ls... l ] [ rs... r ] =>
+        if l r eq then { [ ls... ] [ rs... ] eq } else { False }
+    }
+
+instance eq : [| |]
+    =
+    match {
+    | [| |] [| |] => True
+    }
+
+instance eq : <= Eq? [| a... |], Eq? b => [| a... b^c |]
+    =
+    match {
+    | [| r1... e1 |] [| r2... e2 |] => e1 e2 eq r1 r2 eq and-bool
     }
 
 
@@ -71,8 +89,7 @@ instance iterate : [a^r]^(r || s) a^r
     }
 
 instance iterate : (String t c)^s (Rune t c)^r
-    =
-    {
+    = {
         let s;
         when s length-string 0 gt-inative then {
             let w r = s decode-rune-in-string;
@@ -94,6 +111,7 @@ instance range : (INative u)
             current-low yield!;
             current-low step add-inative
         }
+        drop
     }
 
 instance range : (Rune t c)
@@ -104,6 +122,7 @@ instance range : (Rune t c)
             current-low yield!;
             current-low step add-i32
         }
+        drop
     }
 
 
@@ -120,4 +139,4 @@ func test-check-handler test-success test-name failed =
 
     if test-success then { failed } else { 1 failed add-inative }
 
-export { }
+export { * }

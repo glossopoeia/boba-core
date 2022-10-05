@@ -1,3 +1,5 @@
+import { * } "core-kinds" as kinds
+
 about :
 /// `clear` removes all elements from the value stack.
 native clear
@@ -63,7 +65,4 @@ about :
 /// of the value stack.
 func swapd x y z = y x z
 
-export {
-    clear, gather, spread,
-    dup, dupd, drop, nip, over, pick, rot, swap, swapd
-}
+export { * }
