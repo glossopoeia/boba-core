@@ -140,7 +140,7 @@ instance range : (Rune t c)
 
 
 effect test-check!
-    = test-check! : (INative u)^q Bool^s (String t True)^r ===[ e..., test-demo! ][ p... ][ True ]==> (INative u)^p
+    = test-check! : (INative u)^q Bool^s (String t True)^r ===[ e..., test-check! ][ p... ][ True ]==> (INative u)^p
 
 func test-check-handler test-success test-name failed =
     if test-success
