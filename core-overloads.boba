@@ -58,7 +58,7 @@ instance eq : <= Eq? y => [y^_]
     | [] [] => True
     | [ ls... l ] [ rs... r ] =>
         if l r eq then { [ ls... ] [ rs... ] eq } else { False }
-    | otherwise => drop drop False
+    | else => drop drop False
     }
 
 instance eq : [| |]
