@@ -10,8 +10,8 @@ native spawn
     # nursery := fiber.PopOneValue().(runtime.Nursery)
     # closure := fiber.PopOneValue().(runtime.Closure)
     #
-    # child := runtime.NewFiber(fiber, fiber.Context)
-    # child.SetupClosureCallStored(closure, []runtime.Value{}, nil)
+    # child := runtime.NewFiber(machine, fiber, fiber.Context)
+    # child.SetupClosureCallStored(closure)
     # child.Instruction = closure.CodeStart
     # nursery.Waiter.Add(1)
     # go machine.RunSub(child, nursery.Waiter)
