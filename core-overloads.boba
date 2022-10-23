@@ -74,7 +74,7 @@ instance eq : <= Eq? [| a... |], Eq? b => [| a... b^c |]
 
 
 effect iter! a
-    = yield! : a ===[ e..., (iter! a) ][ p... ][ True ]==>
+    = yield! : z... a ===[ e..., (iter! a) ][ p... ][ True ]==> z...
 
 overload iterate as Iterate? coll elem
     : z... coll ===[ e..., (iter! elem) ][ p... ][ True ]==> z...
