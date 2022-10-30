@@ -11,7 +11,7 @@ native spawn
     # closure := fiber.PopOneValue().(runtime.Closure)
     #
     # child := runtime.NewFiber(machine, fiber, fiber.Context)
-    # child.SetupClosureCallStored(closure)
+    # fiber.Stored = append(fiber.Stored, closure.Captured...)
     # child.Instruction = closure.CodeStart
     # nursery.Waiter.Add(1)
     # go machine.RunSub(child, nursery.Waiter)
