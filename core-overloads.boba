@@ -132,8 +132,8 @@ effect test-check!
 
 func test-check-handler test-success test-name failed =
     if test-success
-    then { test-name " succeeded.\n" }
-    else { test-name " failed.\n" }
+    then { test-name " succeeded.\n" clear-string }
+    else { test-name " failed.\n" clear-string }
     concat-string
     print-string
 
