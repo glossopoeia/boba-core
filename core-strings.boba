@@ -36,6 +36,16 @@ native distrust-string
     =
     #
 
+native clear-string
+    : z... (String t c)^s ===[ e... ][ p... ][ True ]==> z... (String t True)^s
+    =
+    #
+
+native secret-string
+    : z... (String t c)^s ===[ e... ][ p... ][ True ]==> z... (String t False)^s
+    =
+    #
+
 native nil-string
     : z... ===[ e... ][ p... ][ True ]==> z... (String t c)^s
     =
