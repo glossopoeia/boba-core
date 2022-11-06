@@ -1,6 +1,34 @@
 import { * } "core-kinds" as kinds
 import { * } "core-numbers" as nums
 
+data List : Value --> Data
+data Tuple : [Value] --> Data
+data Record : {Field} --> Data
+data Variant : {Field} --> Data
+
+about :
+/// `clear` removes all elements from the value stack.
+native clear
+    : z... ===[ e... ][ p... ][ True ]==>
+    =
+    # fiber.Clear()
+
+about :
+/// `gather` grabs all elements from the value stack, and places them in a tuple.
+/// The tuple is then the only element on the value stack.
+native gather
+    : z... ===[ e... ][ p... ][ True ]==> [| z... |]^s
+    =
+    # fiber.Gather()
+
+about :
+/// `spread` takes a tuple, which must be the *only* element on the value stack,
+/// and places the elements of that tuple on the value stack.
+native spread
+    : [| z^s... |]^((s...) || r) ===[ e... ][ p... ][ True ]==> z^s...
+    =
+    # fiber.Spread()
+
 native nil-tuple
     : z... ===[ e... ][ p... ][ True ]==> z... [| |]^s
     =
