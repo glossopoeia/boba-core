@@ -670,62 +670,62 @@ native conv-bool-inative
     # }
 
 native conv-i8-inative
-    : z... (I8 u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (I8 u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(int8)))
 
 native conv-u8-inative
-    : z... (U8 u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (U8 u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(uint8)))
 
 native conv-i16-inative
-    : z... (I16 u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (I16 u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(int16)))
 
 native conv-u16-inative
-    : z... (U16 u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (U16 u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(uint16)))
 
 native conv-i32-inative
-    : z... (I32 u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (I32 u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(int32)))
 
 native conv-u32-inative
-    : z... (U32 u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (U32 u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(uint32)))
 
 native conv-i64-inative
-    : z... (I64 u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (I64 u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(int64)))
 
 native conv-u64-inative
-    : z... (U64 u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (U64 u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(uint64)))
 
 native conv-inative-inative
-    : z... (INative u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (INative u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(int)))
 
 native conv-unative-inative
-    : z... (UNative u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (UNative u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(uint)))
 
 native conv-single-inative
-    : z... (Single u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (Single u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(float32)))
 
 native conv-double-inative
-    : z... (Double u)^s ===[ e... ][ p... ][ True ]==> z... (I8 u)^r
+    : z... (Double u)^s ===[ e... ][ p... ][ True ]==> z... (INative u)^r
     =
     # fiber.PushValue(int(fiber.PopOneValue().(float64)))
 
