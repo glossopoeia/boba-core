@@ -29,4 +29,4 @@ native check-cancel
     #     fiber.Cancelled = true
     # }
 
-export { }
+export { * }
