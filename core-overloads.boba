@@ -85,10 +85,11 @@ rule iterate-fun-dep? = Iterate? coll e1, Iterate? coll e2 => e1 = e2
 rule iterate-list? = Iterate? [e1^s]^(s || r) e2 => e1^s = e2
 
 instance iterate : [a^r]^(r || s) a^r
-    =
-    let l;
-    for el in list l then {
-        el yield!
+    = {
+        let l;
+        for el in list l then {
+            el yield!
+        }
     }
 
 instance iterate : (String t c)^s (Rune t c)^r
