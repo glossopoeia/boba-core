@@ -4,19 +4,19 @@ import native "math"
 
 kind Measure : abelian
 
-data I8 (u : Measure)
-data U8 (u : Measure)
-data I16 (u : Measure)
-data U16 (u : Measure)
-data I32 (u : Measure)
-data U32 (u : Measure)
-data I64 (u : Measure)
-data U64 (u : Measure)
-data INative (u : Measure)
-data UNative (u : Measure)
+type I8 (u : Measure)
+type U8 (u : Measure)
+type I16 (u : Measure)
+type U16 (u : Measure)
+type I32 (u : Measure)
+type U32 (u : Measure)
+type I64 (u : Measure)
+type U64 (u : Measure)
+type INative (u : Measure)
+type UNative (u : Measure)
 
-data Single (u : Measure)
-data Double (u : Measure)
+type Single (u : Measure)
+type Double (u : Measure)
 
 // =====================================================
 // NEGATION
