@@ -48,14 +48,14 @@ about:
 /// it runs in, and whether or not the compiler believes it is 'total'. All three of these attributes
 /// depend on the operations used within the body of the function, and can be inferred during
 /// type inference.
-data Function : {Effect} --> {Permission} --> Totality --> [Value] --> [Value] --> Data
+type Function : {Effect} --> {Permission} --> Totality --> [Value] --> [Value] --> Data
 
 about:
 /// A tracked value is a data type with a sharing and validity annotation applied to it.
 /// Since sharing analysis is so viral, value-kinded types end up being the arguments
 /// required by most other types, since in Boba a data type without a sharing annotation
 /// cannot be inhabited by any actual instance of a value.
-data Tracked : Data --> Sharing --> Value
+type Tracked : Data --> Sharing --> Value
 
 about:
 /// Function types in Boba can be 'qualified' by a set of constraints. These constraints help
@@ -63,12 +63,12 @@ about:
 /// Haskell's typeclass constraints. This constructor allows us to represent qualified types
 /// as just another form of type, but these should really only occur as an outermost type
 /// constructor since it doesn't make a lot of sense for constraints to be nested in types.
-data Constrained : Constraint --> Value --> Value
+type Constrained : Constraint --> Value --> Value
 
 about:
 /// Since Boba supports a form of variable-arity polymorphism, we also need to have tuples
 /// of constraints, which can be variable-arity. This allows for things like a generic
 /// tuple equality function supporting variable arity polymorphism.
-data ConstraintTuple : [Constraint] --> Constraint
+type ConstraintTuple : [Constraint] --> Constraint
 
 export { * }

@@ -1,8 +1,8 @@
 import { * } "core-kinds" as kinds
 import { * } "core-ref" as ref
 
-data Nursery (h : Heap)
-data CancelToken
+type Nursery (h : Heap)
+type CancelToken
 
 native spawn
     : z... (| ===[ e... ][ p... ][ t ]==> |)^s (Nursery h)^r ===[ e... ][ p... ][ t ]==> z...

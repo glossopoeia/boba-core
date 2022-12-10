@@ -1,10 +1,10 @@
 import { * } "core-kinds" as kinds
 import { * } "core-numbers" as nums
 
-data List : Value --> Data
-data Tuple : [Value] --> Data
-data Record : {Field} --> Data
-data Variant : {Field} --> Data
+type List : Value --> Data
+type Tuple : [Value] --> Data
+type Record : {Field} --> Data
+type Variant : {Field} --> Data
 
 about :
 /// `clear` removes all elements from the value stack.

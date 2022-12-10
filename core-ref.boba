@@ -4,7 +4,7 @@ kind Heap : syntactic
 
 effect st! (h : Heap)
 
-data Ref : Heap --> Value --> Data
+type Ref : Heap --> Value --> Data
 
 native new
     : z... a ===[ e..., (st! h) ][ p... ][ True ]==> z... (Ref h a)^s

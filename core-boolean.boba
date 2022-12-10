@@ -2,7 +2,7 @@ import { * } "core-kinds" as kinds
 
 about :
 /// The native Boolean data type which contains just two values, `True` and `False`.
-data Bool
+type Bool
 
 about :
 /// A core function which pushes the value `True` onto the top of the value stack.

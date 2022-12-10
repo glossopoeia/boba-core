@@ -5,7 +5,7 @@ import { * } "core-numbers" as nums
 import native "strings"
 import native "unicode/utf8"
 
-data Rune (t : Trust) (c : Clearance)
+type Rune (t : Trust) (c : Clearance)
 
 native trust-rune
     : z... (Rune t c)^s ===[ e... ][ p... ][ True ]==> z... (Rune True c)^s
@@ -24,7 +24,7 @@ native eq-rune
     # runeL := fiber.PopOneValue().(rune)
     # fiber.PushValue(runeL == runeR)
 
-data String (t : Trust) (c : Clearance)
+type String (t : Trust) (c : Clearance)
 
 native trust-string
     : z... (String t c)^s ===[ e... ][ p... ][ True ]==> z... (String True c)^s
@@ -146,7 +146,7 @@ native eq-string
 
 effect io!
 
-data Console : Permission
+type Console : Permission
 
 native print-rune
     : z... (Rune t True)^s ===[ e..., io! ][ p..., Console ][ True ]==> z...
