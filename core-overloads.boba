@@ -3,6 +3,7 @@ import { * } "core-combinators" as com
 import { * } "core-boolean" as bool
 import { * } "core-numbers" as num
 import { * } "core-strings" as str
+import { * } "core-conversions" as conv
 import { * } "core-collections" as coll
 
 overload eq as Eq? a
@@ -118,13 +119,13 @@ instance range : (INative u)
         drop
     }
 
-instance range : (Rune t c)
+instance range : (Rune _ _)
     = {
         let high low step;
-        low while dup high lte-i32 then {
+        low conv-rune-i32 while dup high conv-rune-i32 lte-i32 then {
             let current-low;
-            current-low yield!;
-            current-low step add-i32
+            current-low conv-i32-rune yield!;
+            current-low step conv-rune-i32 add-i32
         }
         drop
     }
